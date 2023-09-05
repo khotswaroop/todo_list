@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block 'main' %}
+<style>
+   
+    .submit_form{
+   
+      text-align: center;
+      padding: 5%;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4),
+                  0 6px 20px 0 rgba(0,0,0,0.36);
+    }
+</style>
+
+<div class="container mt-5">
+    <a href="/alltodo"><button class="btn btn-success">All Todo</button></a>
+        <div class="col-md-8 m-auto" >
+            <div  class="submit_form">
+                <form  method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                    <table>
+                        {{form}}
+                    </table>
+                    <br>
+                <center>
+                <input type="submit" class="btn btn-primary" value="Submit" />
+                </center>
+                </form>
+            </div>
+        </div>
+
+{% endblock 'main' %}
