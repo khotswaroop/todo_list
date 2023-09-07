@@ -1,0 +1,14 @@
+For token creation
+
+mutation{
+  tokenAuth(username:"swap123",password:"456"){
+    success,
+    errors,
+    token,
+    refreshToken,
+    user{
+      username
+      pk
+    }
+  }
+}
